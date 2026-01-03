@@ -1,73 +1,112 @@
-# Welcome to your Lovable project
+Algorithm Performance Lab
 
-## Project info
+Eksperimen & Visualisasi Runtime Algoritma
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+📌 Deskripsi Proyek
 
-## How can I edit this code?
+Algorithm Performance Lab adalah aplikasi web interaktif yang digunakan untuk menganalisis dan membandingkan efisiensi algoritma dalam konteks pencarian toko terdekat berdasarkan koordinat geografis.
 
-There are several ways of editing your application.
+Proyek ini dikembangkan sebagai Tugas Besar Mata Kuliah Analisis Kompleksitas Algoritma (Semester Ganjil 2025/2026), dengan fokus pada perbandingan:
 
-**Use Lovable**
+Algoritma iteratif (O(n))
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Algoritma rekursif (O(n))
 
-Changes made via Lovable will be committed automatically to this repo.
+Algoritma sorting bawaan JavaScript (Array.prototype.sort) dengan kompleksitas O(n log n)
 
-**Use your preferred IDE**
+Pengukuran performa dilakukan dengan berbagai ukuran dataset, disertai visualisasi runtime, analisis otomatis, dan representasi proses algoritma.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+🎯 Tujuan
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Tujuan utama dari proyek ini adalah:
 
-Follow these steps:
+Membandingkan efisiensi algoritma iteratif dan rekursif dalam menyelesaikan permasalahan pencarian minimum.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+Menganalisis apakah algoritma sorting bawaan JavaScript merupakan solusi yang efisien untuk kasus pencarian toko terdekat.
+
+Memvisualisasikan perbedaan performa algoritma dalam berbagai ukuran dataset.
+
+Membantu pemahaman konsep kompleksitas waktu asimtotik melalui eksperimen langsung.
+
+🧪 Studi Kasus
+
+Studi kasus yang digunakan adalah:
+
+Menentukan lokasi toko terdekat dari posisi pengguna berdasarkan koordinat lintang dan bujur.
+
+Langkah umum yang dilakukan:
+
+Menghitung jarak antara pengguna dan setiap toko menggunakan rumus Haversine.
+
+Menentukan toko dengan jarak minimum menggunakan tiga pendekatan algoritmik:
+
+Iteratif
+
+Rekursif
+
+Sorting
+
+✨ Fitur Utama
+
+📊 Grafik Runtime Interaktif
+Menampilkan perbandingan waktu eksekusi algoritma berdasarkan ukuran dataset.
+
+🎛️ Kontrol Eksperimen
+
+Penentuan ukuran dataset
+
+Jumlah iterasi benchmark
+
+Pemilihan algoritma yang ditampilkan
+
+🤖 Analisis Otomatis
+Insight berbasis hasil benchmark untuk membantu interpretasi performa algoritma.
+
+🧩 Visualisasi Algoritma
+Representasi proses internal algoritma (iteratif, rekursif, dan sorting) menggunakan data sampel.
+
+🌙 Dark Mode
+Mode tampilan gelap untuk kenyamanan visual.
+
+Catatan: Visualisasi algoritma bersifat representatif, sedangkan pengukuran runtime dilakukan pada seluruh dataset sesuai ukuran yang dipilih.
+
+🛠️ Teknologi yang Digunakan
+
+Proyek ini dibangun menggunakan teknologi berikut:
+
+⚡ Vite
+
+🟦 TypeScript
+
+⚛️ React
+
+🎨 shadcn-ui
+
+💨 Tailwind CSS
+
+🚀 Menjalankan Proyek Secara Lokal
+Prasyarat
+
+Node.js (disarankan via nvm)
+
+npm
+
+Langkah Instalasi
+
+# Clone repository
+
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Masuk ke folder proyek
+
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependency
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
+
+# Jalankan server development
+
 npm run dev
-```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Aplikasi akan berjalan di mode development dengan hot-reload.
