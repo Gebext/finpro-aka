@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 20%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 214 32% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 214 32% 91%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 20%;
+
+    --radius: 0.75rem;
+
+    /* Algorithm Colors */
+    --algo-iterative: 160 84% 39%;
+    --algo-iterative-light: 160 84% 95%;
+    --algo-recursive: 270 76% 55%;
+    --algo-recursive-light: 270 76% 95%;
+    --algo-sort: 38 92% 50%;
+    --algo-sort-light: 38 92% 95%;
+
+    /* Chart colors */
+    --chart-grid: 214 32% 91%;
+    --chart-bg: 0 0% 100%;
+
+    /* Insight colors */
+    --insight-bg: 210 40% 96%;
+    --insight-border: 214 32% 85%;
+
+    /* Lab accent */
+    --lab-accent: 199 89% 48%;
+    --lab-glow: 199 89% 48% / 0.15;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 17%;
+    --ring: 212 27% 84%;
+
+    /* Algorithm Colors - slightly brighter for dark mode */
+    --algo-iterative: 160 84% 45%;
+    --algo-iterative-light: 160 84% 15%;
+    --algo-recursive: 270 76% 60%;
+    --algo-recursive-light: 270 76% 15%;
+    --algo-sort: 38 92% 55%;
+    --algo-sort-light: 38 92% 15%;
+
+    /* Chart colors */
+    --chart-grid: 217 33% 25%;
+    --chart-bg: 222 47% 9%;
+
+    /* Insight colors */
+    --insight-bg: 217 33% 12%;
+    --insight-border: 217 33% 25%;
+
+    /* Lab accent */
+    --lab-accent: 199 89% 55%;
+    --lab-glow: 199 89% 55% / 0.2;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .algo-badge-iterative {
+    @apply bg-algo-iterative-light text-algo-iterative border border-algo-iterative/30;
+  }
+
+  .algo-badge-recursive {
+    @apply bg-algo-recursive-light text-algo-recursive border border-algo-recursive/30;
+  }
+
+  .algo-badge-sort {
+    @apply bg-algo-sort-light text-algo-sort border border-algo-sort/30;
+  }
+
+  .lab-card {
+    @apply bg-card border border-border rounded-xl shadow-sm;
+  }
+
+  .lab-glow {
+    box-shadow: 0 0 40px hsl(var(--lab-glow));
+  }
+
+  .insight-panel {
+    @apply bg-insight-bg border border-insight-border rounded-lg;
+  }
+
+  .control-section {
+    @apply p-4 rounded-lg bg-muted/50 border border-border;
+  }
+}
+
+@layer utilities {
+  .text-algo-iterative {
+    color: hsl(var(--algo-iterative));
+  }
+
+  .text-algo-recursive {
+    color: hsl(var(--algo-recursive));
+  }
+
+  .text-algo-sort {
+    color: hsl(var(--algo-sort));
+  }
+
+  .bg-algo-iterative {
+    background-color: hsl(var(--algo-iterative));
+  }
+
+  .bg-algo-recursive {
+    background-color: hsl(var(--algo-recursive));
+  }
+
+  .bg-algo-sort {
+    background-color: hsl(var(--algo-sort));
+  }
+
+  .bg-algo-iterative-light {
+    background-color: hsl(var(--algo-iterative-light));
+  }
+
+  .bg-algo-recursive-light {
+    background-color: hsl(var(--algo-recursive-light));
+  }
+
+  .bg-algo-sort-light {
+    background-color: hsl(var(--algo-sort-light));
+  }
+
+  .bg-insight-bg {
+    background-color: hsl(var(--insight-bg));
+  }
+
+  .border-insight-border {
+    border-color: hsl(var(--insight-border));
+  }
+
+  .bg-chart-bg {
+    background-color: hsl(var(--chart-bg));
+  }
+}
