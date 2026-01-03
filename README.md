@@ -1,34 +1,34 @@
-Algorithm Performance Lab
+## Algorithm Performance Lab
 
-Eksperimen & Visualisasi Runtime Algoritma
+### Eksperimen & Visualisasi Runtime Algoritma
 
-📌 Deskripsi Proyek
+## 📌 Deskripsi Proyek
 
 Algorithm Performance Lab adalah aplikasi web interaktif yang digunakan untuk menganalisis dan membandingkan efisiensi algoritma dalam konteks pencarian toko terdekat berdasarkan koordinat geografis.
 
 Proyek ini dikembangkan sebagai Tugas Besar Mata Kuliah Analisis Kompleksitas Algoritma (Semester Ganjil 2025/2026), dengan fokus pada perbandingan:
 
-Algoritma iteratif (O(n))
+- Algoritma iteratif (O(n))
 
-Algoritma rekursif (O(n))
+- Algoritma rekursif (O(n))
 
-Algoritma sorting bawaan JavaScript (Array.prototype.sort) dengan kompleksitas O(n log n)
+- Algoritma sorting bawaan JavaScript (Array.prototype.sort) dengan kompleksitas O(n log n)
 
 Pengukuran performa dilakukan dengan berbagai ukuran dataset, disertai visualisasi runtime, analisis otomatis, dan representasi proses algoritma.
 
-🎯 Tujuan
+## 🎯 Tujuan
 
 Tujuan utama dari proyek ini adalah:
 
-Membandingkan efisiensi algoritma iteratif dan rekursif dalam menyelesaikan permasalahan pencarian minimum.
+- Membandingkan efisiensi algoritma iteratif dan rekursif dalam menyelesaikan permasalahan pencarian minimum.
 
-Menganalisis apakah algoritma sorting bawaan JavaScript merupakan solusi yang efisien untuk kasus pencarian toko terdekat.
+- Menganalisis apakah algoritma sorting bawaan JavaScript merupakan solusi yang efisien untuk kasus pencarian toko terdekat.
 
-Memvisualisasikan perbedaan performa algoritma dalam berbagai ukuran dataset.
+- Memvisualisasikan perbedaan performa algoritma dalam berbagai ukuran dataset.
 
-Membantu pemahaman konsep kompleksitas waktu asimtotik melalui eksperimen langsung.
+- Membantu pemahaman konsep kompleksitas waktu asimtotik melalui eksperimen langsung.
 
-🧪 Studi Kasus
+## 🧪 Studi Kasus
 
 Studi kasus yang digunakan adalah:
 
@@ -36,70 +36,69 @@ Menentukan lokasi toko terdekat dari posisi pengguna berdasarkan koordinat linta
 
 Langkah umum yang dilakukan:
 
-Menghitung jarak antara pengguna dan setiap toko menggunakan rumus Haversine.
+1. Menghitung jarak antara pengguna dan setiap toko menggunakan rumus Haversine.
 
-Menentukan toko dengan jarak minimum menggunakan tiga pendekatan algoritmik:
+2. Menentukan toko dengan jarak minimum menggunakan tiga pendekatan algoritmik:
 
-Iteratif
+   - Iteratif
 
-Rekursif
+   - Rekursif
 
-Sorting
+   - Sorting (built-in javascript function)
 
-✨ Fitur Utama
+## ✨ Fitur Utama
 
-📊 Grafik Runtime Interaktif
-Menampilkan perbandingan waktu eksekusi algoritma berdasarkan ukuran dataset.
+- 📊 Grafik Runtime Interaktif
+  Menampilkan perbandingan waktu eksekusi algoritma berdasarkan ukuran dataset.
 
-🎛️ Kontrol Eksperimen
+- 🎛️ Kontrol Eksperimen
 
-Penentuan ukuran dataset
+  - Penentuan ukuran dataset
 
-Jumlah iterasi benchmark
+  - Jumlah iterasi benchmark
 
-Pemilihan algoritma yang ditampilkan
+  - Pemilihan algoritma yang ditampilkan
 
-🤖 Analisis Otomatis
-Insight berbasis hasil benchmark untuk membantu interpretasi performa algoritma.
+- 🤖 Analisis Otomatis
+  Insight berbasis hasil benchmark untuk membantu interpretasi performa algoritma.
 
-🧩 Visualisasi Algoritma
-Representasi proses internal algoritma (iteratif, rekursif, dan sorting) menggunakan data sampel.
+- 🧩 Visualisasi Algoritma
+  Representasi proses internal algoritma (iteratif, rekursif, dan sorting) menggunakan data sampel.
 
-🌙 Dark Mode
-Mode tampilan gelap untuk kenyamanan visual.
-
-Catatan: Visualisasi algoritma bersifat representatif, sedangkan pengukuran runtime dilakukan pada seluruh dataset sesuai ukuran yang dipilih.
+**Catatan:** Visualisasi algoritma bersifat representatif, sedangkan pengukuran runtime dilakukan pada seluruh dataset sesuai ukuran yang dipilih.
 
 🛠️ Teknologi yang Digunakan
 
-Proyek ini dibangun menggunakan teknologi berikut:
+- Proyek ini dibangun menggunakan teknologi berikut:
 
-⚡ Vite
+- ⚡ Vite
 
-🟦 TypeScript
+- 🟦 TypeScript
 
-⚛️ React
+- ⚛️ React
 
-🎨 shadcn-ui
+- 🎨 shadcn-ui
 
-💨 Tailwind CSS
+- 💨 Tailwind CSS
 
-🚀 Menjalankan Proyek Secara Lokal
-Prasyarat
+## 🚀 Menjalankan Proyek Secara Lokal
 
-Node.js (disarankan via nvm)
+**Prasyarat**
 
-npm
+    - Node.js (disarankan via nvm)
+
+    - npm
 
 Langkah Instalasi
 
+```sh
 # Clone repository
 
-git clone <YOUR_GIT_URL>
+git clone https://github.com/Gebext/finpro-aka.git
 
 # Masuk ke folder proyek
 
-cd <YOUR_PROJECT_NAME>
+cd finpro-aka
 
 # Install dependency
 
@@ -110,3 +109,4 @@ npm install
 npm run dev
 
 Aplikasi akan berjalan di mode development dengan hot-reload.
+```
